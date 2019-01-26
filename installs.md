@@ -1,0 +1,11 @@
+# installs
+- vim
+- git
+- i3
+- nvm
+- python-pip
+- python3-pip
+- gcloud
+- docker
+-
+- ... some other things that I forgotten

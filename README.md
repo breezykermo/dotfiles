@@ -7,3 +7,9 @@ This should work with both vim and nvim.
 
 I typically use a [fish shell](https://fishshell.com/) enhanced with
 [starship](https://github.com/starship/starship).
+
+
+# setup
+```
+ln -sf .config/starship.toml $HOME/.config/starship.toml
+```

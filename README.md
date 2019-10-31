@@ -11,5 +11,5 @@ I typically use a [fish shell](https://fishshell.com/) enhanced with
 
 # setup
 ```
-ln -sf .config/starship.toml $HOME/.config/starship.toml
+ln -sf (pwd)/.config/starship.toml $HOME/.config/starship.toml
 ```

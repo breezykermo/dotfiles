@@ -7,8 +7,8 @@ disabled = true
 [battery]
 disabled = true
 
-[character]
-symbol = "➜"
+# [character]
+# symbol = "➜"
 
 [directory]
 truncation_length = 8

@@ -1,4 +1,4 @@
-# installs
+# essentials 
 - vim
 - git
 - i3
@@ -7,5 +7,8 @@
 - python3-pip
 - gcloud
 - docker
--
-- ... some other things that I forgotten
+
+## shell enhance
+- [lazygit](https://github.com/jesseduffield/lazygit)
+- [fish](https://fishshell.com/)
+- [starship](https://github.com/starship/starship)

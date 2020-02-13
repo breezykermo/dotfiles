@@ -19,8 +19,8 @@
 *.color15:    #E6E6E6
 
 ! -- Fonts -- !
-URxvt.font: xft:Inconsolata:pixelsize=10:antialias=true:hinting=full,xft:Symbola:pixelsize=8:antialias=true:hinting=full
-URxvt.boldFont: xft:Inconsolata:style=bold:pixelsize=10:antialias=true:hinting=full,xft:Symbola:pixelsize=8:antialias=true:hinting=full
+URxvt.font: xft:JetBrainsMono:pixelsize=10:antialias=true:hinting=full,xft:Symbola:pixelsize=10:antialias=true:hinting=full
+URxvt.boldFont: xft:JetBrainsMono:style=bold:pixelsize=10:antialias=true:hinting=full,xft:Symbola:pixelsize=10:antialias=true:hinting=full
 
 !!*faceSize:              10
 *bellIsUrgent:          true
@@ -44,9 +44,19 @@ URxvt.secondaryWheel:   1
 URxvt*termName:         rxvt
 
 !! copy paste
-URxvt.clipboard.autocopy:   true
-URxvt.clipboard.copycmd:    xclip -i -selection clipboard
-URxvt.clipboard.pastecmd:   xclip -o -selection clipboard
+! URxvt.clipboard.autocopy:   true
+! URxvt.clipboard.copycmd:    xclip -i -selection clipboard
+! URxvt.clipboard.pastecmd:   xclip -o -selection clipboard
+!-*- Perl extensions -*-
+URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher,keyboard-select
+URxvt.keysym.M-u:     perl:url-select:select_next
+URxvt.url-launcher:   /usr/bin/firefox
+URxvt.underlineURLs:  True
+URxvt.matcher.button: 1
+URxvt.keysym.M-Escape:perl:keyboard-select:activate
+URxvt.keysym.Control-Shift-V:     perl:pasta:paste
+! uncomment this if you want copy when text is selected
+! URxvt.clipboard.autocopy: true
 
 !! disable default bindings for Control-Shift
 URxvt.iso14755: false

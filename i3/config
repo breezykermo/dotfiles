@@ -97,10 +97,10 @@ bindsym $mod+Shift+Up move up
 # bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+bar split h
+bindsym $mod+z split h
 
 # split in vertical orientation
-bindsym $mod+minus split v
+bindsym $mod+x split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -213,17 +213,17 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # i3status bar config
-bar {
-	font pango:monospace 8
-	status_command $barcmd --config ~/.i3/status.conf
-}
+# bar {
+# 	font pango:monospace 8
+# 	status_command $barcmd --config ~/.i3/status.conf
+# }
 
 # auto run commands set background use the same background as slim (login
 # manager) this file is an alias to something in /home/jessie/Pictures
-exec --no-startup-id feh --bg-fill ${HOME}/Pictures/central-park.jpg
+# exec --no-startup-id feh --bg-fill ${HOME}/Pictures/central-park.jpg
 
 # Sway backgroud output "*" background ${HOME}/Pictures/central-park2.jpg fill
 
 # run the merge for good colors
-exec xrdb -merge $HOME/.Xresources exec xrdb -merge $HOME/.Xdefaults
+# exec xrdb -merge $HOME/.Xresources exec xrdb -merge $HOME/.Xdefaults
 

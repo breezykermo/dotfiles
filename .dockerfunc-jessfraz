@@ -221,12 +221,39 @@ consul(){
 	hostess add consul "$(docker inspect --format '{{.NetworkSettings.Networks.bridge.IPAddress}}' consul)"
 	browser-exec "http://consul:8500"
 }
+cura(){
+	del_stopped cura
+
+	docker run -d \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-e "DISPLAY=unix${DISPLAY}" \
+		-v "${HOME}/cura:/root/cura" \
+		-v "${HOME}/.cache/cura:/root/.cache/cura" \
+		-v "${HOME}/.config/cura:/root/.config/cura" \
+		-e QT_DEVICE_PIXEL_RATIO \
+		-e GDK_SCALE \
+		-e GDK_DPI_SCALE \
+		--device /dev/dri \
+		--name cura \
+		${DOCKER_REPO_PREFIX}/cura
+}
 dcos(){
 	docker run -it --rm \
 		-v "${HOME}/.dcos:/root/.dcos" \
 		-v "$(pwd):/root/apps" \
 		-w /root/apps \
 		${DOCKER_REPO_PREFIX}/dcos-cli "$@"
+}
+figma() {
+	del_stopped figma
+
+	docker run --rm -it \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-e "DISPLAY=unix${DISPLAY}" \
+		--name figma \
+		${DOCKER_REPO_PREFIX}/figma-wine bash
 }
 firefox(){
 	del_stopped firefox
@@ -380,6 +407,23 @@ keypassxc(){
 		--name keypassxc \
 		${DOCKER_REPO_PREFIX}/keepassxc
 }
+kicad(){
+	del_stopped kicad
+
+	docker run -d \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-e "DISPLAY=unix${DISPLAY}" \
+		-v "${HOME}/kicad:/root/kicad" \
+		-v "${HOME}/.cache/kicad:/root/.cache/kicad" \
+		-v "${HOME}/.config/kicad:/root/.config/kicad" \
+		-e QT_DEVICE_PIXEL_RATIO \
+		-e GDK_SCALE \
+		-e GDK_DPI_SCALE \
+		--device /dev/dri \
+		--name kicad \
+		${DOCKER_REPO_PREFIX}/kicad
+}
 kvm(){
 	del_stopped kvm
 	relies_on pulseaudio
@@ -388,10 +432,14 @@ kvm(){
 	modprobe kvm
 
 	docker run -d \
+		--tmpfs /var/run \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix \
-		-v /run/libvirt:/var/run/libvirt \
+		-v "${HOME}/kvm:/root/kvm" \
 		-e "DISPLAY=unix${DISPLAY}" \
+		-e GDK_SCALE \
+		-e GDK_DPI_SCALE \
+		-e QT_DEVICE_PIXEL_RATIO \
 		--link pulseaudio:pulseaudio \
 		-e PULSE_SERVER=pulseaudio \
 		--group-add audio \
@@ -570,6 +618,22 @@ now(){
 		--workdir /usr/src/repo \
 		--log-driver none \
 		${DOCKER_REPO_PREFIX}/now "$@"
+}
+openscad(){
+	del_stopped openscad
+
+	docker run -d \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-e "DISPLAY=unix${DISPLAY}" \
+		-v "${HOME}/openscad:/root/openscad" \
+		-v "${HOME}/.config/OpenSCAD:/root/.config/OpenSCAD" \
+		-e QT_DEVICE_PIXEL_RATIO \
+		-e GDK_SCALE \
+		-e GDK_DPI_SCALE \
+		--device /dev/dri \
+		--name openscad \
+		${DOCKER_REPO_PREFIX}/openscad
 }
 opensnitch(){
 	del_stopped opensnitchd
@@ -1053,6 +1117,17 @@ virsh(){
 		--net container:kvm \
 		${DOCKER_REPO_PREFIX}/libvirt-client "$@"
 }
+virtualbox(){
+	del_stopped virtualbox
+
+	docker run -d \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-e "DISPLAY=unix${DISPLAY}" \
+		--privileged \
+		--name virtualbox \
+		${DOCKER_REPO_PREFIX}/virtualbox
+}
 virt_viewer(){
 	relies_on kvm
 
@@ -1109,8 +1184,30 @@ watchman(){
 		--name watchman \
 		${DOCKER_REPO_PREFIX}/watchman --foreground
 }
+weematrix(){
+	del_stopped weematrix
+
+	docker run --rm -it \
+		--user root \
+		-v "${HOME}/.weechat:/home/user/.weechat" \
+		${DOCKER_REPO_PREFIX}/weechat-matrix \
+		chown -R user /home/user/.weechat
+
+	docker run --rm -it \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v "${HOME}/.weechat:/home/user/.weechat" \
+		-e "TERM=screen" \
+		--name weematrix \
+		${DOCKER_REPO_PREFIX}/weechat-matrix
+}
 weeslack(){
 	del_stopped weeslack
+
+	docker run --rm -it \
+		--user root \
+		-v "${HOME}/.weechat:/home/user/.weechat" \
+		${DOCKER_REPO_PREFIX}/wee-slack \
+		chown -R user /home/user/.weechat
 
 	docker run --rm -it \
 		-v /etc/localtime:/etc/localtime:ro \
@@ -1177,3 +1274,4 @@ yubico_piv_tool(){
 		${DOCKER_REPO_PREFIX}/yubico-piv-tool bash
 }
 alias yubico-piv-tool="yubico_piv_tool"
+

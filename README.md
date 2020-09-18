@@ -10,12 +10,13 @@ I typically use a [fish shell](https://fishshell.com/).
 
 # setup
 ```
-ln -sf .Xresources $HOME/.Xresources
-ln -sf .aliases $HOME/.aliases 
-ln -sf .bashrc $HOME/.bashrc
+cp -sf .Xresources $HOME/.Xresources
+cp -sf .aliases $HOME/.aliases 
+cp .bashrc $HOME/.bashrc
 cp .gitconfig $HOME/.gitconfig
 alias use_monitor='bash ~/dotfiles/use-monitor.sh'
 alias use_native='bash ~/dotfiles/use-native.sh'
 # if using i3..
-ln -sf i3/config $HOME/.config/i3/config
+mkdir $HOME/.config/i3
+cp i3/config $HOME/.config/i3/config
 ```

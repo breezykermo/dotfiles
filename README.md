@@ -14,6 +14,7 @@ cp -sf .Xresources $HOME/.Xresources
 cp -sf .aliases $HOME/.aliases 
 cp .bashrc $HOME/.bashrc
 cp .gitconfig $HOME/.gitconfig
+cp .tmux.conf $HOME/.tmux.conf
 alias use_monitor='bash ~/dotfiles/use-monitor.sh'
 alias use_native='bash ~/dotfiles/use-native.sh'
 # if using i3..

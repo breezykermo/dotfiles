@@ -29,7 +29,7 @@
 *color15: #ebdbb2
 
 ! -- Fonts -- !
-URxvt.font: xft:JuliaMono:pixelsize=12:antialias=true:hinting=full,xft:Symbola:pixelsize=10:antialias=true:hinting=full
+URxvt.font: xft:Monospace:size=12:antialias=true:hinting=full,xft:Symbola:size=12:antialias=true:hinting=full
 ! URxvt.boldFont: xft:JuliaMono:style=bold:pixelsize=12:antialias=true:hinting=full,xft:Symbola:pixelsize=10:antialias=true:hinting=full
 ! !!*faceSize:              10
 *bellIsUrgent:          true

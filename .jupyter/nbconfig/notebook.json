@@ -1,0 +1,8 @@
+{
+  "load_extensions": {
+    "nbextensions_configurator/config_menu/main": true,
+    "contrib_nbextensions_help_item/main": true,
+    "codefolding": true,
+    "codefolding/main": true
+  }
+}

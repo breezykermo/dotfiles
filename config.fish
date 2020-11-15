@@ -15,3 +15,6 @@ set -gx PATH /home/lachlan/.npm-global/bin $PATH
 
 # blender
 set -gx PATH /home/lachlan/lib/blender $PATH
+
+# rust
+source ~/.cargo/env

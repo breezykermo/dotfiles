@@ -31,7 +31,7 @@ exec xinput set-prop 12 292 1
 # }
 client.placeholder #242424 #242424 #242424
 client.background #242424 #242424 #242424
-client.focused #4A4A4A #4A4A4A #e5e5e5 #4A4A4A
+client.focused #cba6f5 #cba6f5 #e5e5e5 #cba6f5
 client.unfocused #4A4A4A #222222 #aaaaaa #222222
 client.focused_inactive #4A4A4A #222222 #a9a9a9 #222222
 client.urgent #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
@@ -93,10 +93,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys: bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -167,7 +167,7 @@ bindsym XF86MonBrightnessDown exec sudo light -U 5 # decrease screen brightness
 # ${HOME}'/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S_$wx$h.png' -e
 # ${HOME}'/google-cloud-sdk/bin/gsutil cp -a public-read $f
 # gs://misc.j3ss.co/screenshots/ && echo https://misc.j3ss.co/screenshots/$n |
-# xclip -i -selection clipboard'"
+# xclip -i -sjlection clipboard'"
 # Screenshot fullscreen, sway bindsym Shift+Print exec "swaygrab
 #${HOME}/Pictures/Screenshots/$(date '+%Y-%m-%d-%H-%M-%S').png"
 # Screenshot with selection
@@ -201,16 +201,16 @@ mode "resize" {
         # Pressing left will shrink the window’s width. Pressing right will grow
         # the window’s width. Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym l resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym j resize shrink height 5 px or 5 ppt
+        bindsym h resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -221,7 +221,7 @@ bindsym $mod+r mode "resize"
 
 # i3status bar config
 bar {
-	font JuliaMono 8
+	font JuliaMono 14
 	status_command $barcmd --config ~/dotfiles/i3/status.conf
 }
 

@@ -29,9 +29,10 @@
 *color15: #ebdbb2
 
 ! -- Fonts -- !
-URxvt.font: xft:JuliaMono:light:size=11:antialias=true:hinting=full,xft:Symbola:size=11:antialias=true:hinting=full
-! URxvt.boldFont: xft:JuliaMono:style=bold:pixelsize=12:antialias=true:hinting=full,xft:Symbola:pixelsize=10:antialias=true:hinting=full
-! !!*faceSize:              10
+URxvt.font: xft:SourceCodePro:pixelsize=22:antialias=true:hinting=full
+URxvt.boldFont: xft:SourceCodePro:style=bold:pixelsize=22:antialias=true:hinting=full
+
+!*faceSize:              10
 *bellIsUrgent:          true
 ! !! scroll
 ! !! do not scroll with output

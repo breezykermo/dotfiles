@@ -19,23 +19,13 @@ exec --no-startup-id xsetroot -solid "#949494"
 # tap input for touchpad
 exec xinput set-prop 12 292 1
 
-# colors {
-# background #000000
-# statusline #2E9AFE
-# separator #00000
-# focused_workspace #2E9AFE #cccccc #2E9AFE
-# active_workspace #2E9AFE #444444 #2E9AFE
-# inactive_workspace #2E9AFE #000000 #2E9AFE
-# urgent_workspace #2E9AFE #000000 #900000
-# }
-# }
-client.placeholder #242424 #242424 #242424
-client.background #242424 #242424 #242424
-client.focused #cba6f5 #cba6f5 #e5e5e5 #cba6f5
-client.unfocused #4A4A4A #222222 #aaaaaa #222222
-client.focused_inactive #4A4A4A #222222 #a9a9a9 #222222
-client.urgent #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
-
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #4c2978 #efefef #2e9ef4   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.background       #ffffff
 # Before i3 v4.8, we used to recommend this one as the default: font
 # -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1 The font above is
 # very space-efficient, that is, it looks good, sharp and clear in small sizes.
@@ -56,8 +46,8 @@ bindsym $mod+d exec $menu
 bindsym $mod+Shift+q kill
 
 # spotify: no border
-for_window [class="^Spotify$"] border none
-for_window [class="^Spotify Premium$"] border none
+# for_window [class="^Spotify$"] border none
+# for_window [class="^Spotify Premium$"] border none
 
 # skype, steam, wine: float Gimp
 # for_window [class="Code"] floating enable for_window [class="Firefox"] floating

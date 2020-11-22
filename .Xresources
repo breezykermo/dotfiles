@@ -1,7 +1,4 @@
-! Dracula Xresources palette
-! hard contrast: *background: #1d2021
 *background: #282828
-! soft contrast: *background: #32302f
 *foreground: #ebdbb2
 ! Black + DarkGrey
 *color0:  #282828
@@ -29,8 +26,9 @@
 *color15: #ebdbb2
 
 ! -- Fonts -- !
-URxvt.font: xft:SourceCodePro:pixelsize=22:antialias=true:hinting=full
-URxvt.boldFont: xft:SourceCodePro:style=bold:pixelsize=22:antialias=true:hinting=full
+URxvt.font: xft:Hack:size=16:antialias=true:hinting=full
+! URxvt.boldFont: xft:SourceCodePro:style=bold:pixelsize=16:antialias=true:hinting=full
+! URxvt.letterSpace: -4
 
 !*faceSize:              10
 *bellIsUrgent:          true

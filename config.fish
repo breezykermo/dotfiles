@@ -18,3 +18,6 @@ set -gx PATH /home/lachlan/lib/blender $PATH
 
 # rust
 source ~/.cargo/env
+
+# conda
+source /sata/miniconda/etc/fish/conf.d/conda.fish

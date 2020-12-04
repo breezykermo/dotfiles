@@ -2,6 +2,7 @@ set fish_greeting
 xset r rate 220 40
 setxkbmap -option ctrl:nocaps
 alias tmux='env TERM=screen-256color-bce tmux'
+alias ff='env VISUAL=nvim ranger'
 
 # GO paths
 set -gx PATH /usr/local/go/bin $PATH

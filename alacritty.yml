@@ -1,0 +1,15 @@
+# example here: https://github.com/tmcdonell/config-alacritty/blob/master/alacritty.yml
+font:
+  normal:
+    family: JuliaMono
+  bold:
+    family: JuliaMono
+  italic:
+    family: JuliaMono
+  size: 8.0
+
+colors:
+  primary:
+    background: '#282828'
+    foreground: '#ebdbb2'
+

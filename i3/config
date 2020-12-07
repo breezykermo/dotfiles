@@ -3,7 +3,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
-set $term urxvt
+# set $term urxvt
+set $term alacritty
 set $menu i3-dmenu-desktop --dmenu="dmenu -fn 'DejaVu Sans Mono-8'"
 set $barcmd i3status
 set $lockcmd i3lock
@@ -12,7 +13,7 @@ set $lockcmd i3lock
 # is used in the bar {} block below. This font is widely installed, provides
 # lots of unicode glyphs, right-to-left text rendering and scalability on
 # retina/hidpi displays (thanks to pango).
-font JuliaMono 8
+font Inter 8
 
 exec --no-startup-id xsetroot -solid "#949494"
 # exec --no-startup-id clipit

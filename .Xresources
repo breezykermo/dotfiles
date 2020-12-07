@@ -26,7 +26,7 @@
 *color15: #ebdbb2
 
 ! -- Fonts -- !
-URxvt.font: xft:Hack:size=16:antialias=true:hinting=full
+URxvt.font: xft:Hack:size=13:antialias=true:hinting=full
 ! URxvt.boldFont: xft:SourceCodePro:style=bold:pixelsize=16:antialias=true:hinting=full
 ! URxvt.letterSpace: -4
 

@@ -1,0 +1,12 @@
+hash -d cac=/home/lk/.cache 
+hash -d cf=/home/lk/.config 
+hash -d D=/home/lk/Downloads 
+hash -d d=/home/lk/Documents 
+hash -d dt=/home/lk/.local/share 
+hash -d h=/home/lk 
+hash -d m=/home/lk/Music 
+hash -d mn=/mnt 
+hash -d pp=/home/lk/Pictures 
+hash -d sc=/home/lk/.local/bin 
+hash -d src=/home/lk/.local/src 
+hash -d vv=/home/lk/Videos 

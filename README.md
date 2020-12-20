@@ -10,5 +10,7 @@ setup](https://videos.lukesmith.xyz/videos/watch/f6b78db7-b368-4647-bc64-28c08ff
 but with [fish](https://fishshell.com/) as the default shell and [my vim setup](https://github.com/breezykermo/.vim).
 
 # Install 
-Run the LARBS install script with dotfiles pointing to this repo, and the
-package list to 'progs.csv' at the root level here.
+1. Run the LARBS install script with dotfiles pointing to this repo, and the
+   package list to 'progs.csv' at the root level here.
+2. Git clone [my vim setup](https://github.com/breezykermo/.vim) into .vim.
+3. Reboot? Not sure.

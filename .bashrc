@@ -1,5 +1,3 @@
-xset r rate 220 40
-setxkbmap -option ctrl:nocaps
 # Load .bashrc and other files...
 for file in ~/.{bash_prompt,aliases,functions,path,dockerfunc-jessfraz,extra,exports}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then

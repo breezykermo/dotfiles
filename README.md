@@ -10,7 +10,24 @@ setup](https://videos.lukesmith.xyz/videos/watch/f6b78db7-b368-4647-bc64-28c08ff
 but with [fish](https://fishshell.com/) as the default shell and [my vim setup](https://github.com/breezykermo/.vim).
 
 # Install 
-1. Run the LARBS install script with dotfiles pointing to this repo, and the
-   package list to 'progs.csv' at the root level here.
-2. Git clone [my vim setup](https://github.com/breezykermo/.vim) into .vim.
-3. Reboot? Not sure.
+1. Run the LARBS install script. 
+2. Git clone this repo into ~/dotfiles.
+3. Git clone [my vim setup](https://github.com/breezykermo/.vim) into .vim and follow the setup instructions there.
+4. `sudo pacman -S fish htop bat ctags emacs`
+5. `rm -rf ~/.local` and `mv ~/dotfiles/.local ~/.local`
+6. `rm -rf ~/.config` and `mv ~/dotfiles/.config ~/.config`
+7. `mv ~/dotfiles/.gitconfig ~/.gitconfig`
+8. `mv ~/dotfiles/.jupyter ~/.jupyter`
+9. `mv ~/dotfiles/.fonts ~/.fonts`
+
+## suckless configs
+these are deleted when replacing `.config` above, so need to reclone:
+```bash
+for REPO in dwm,dmenu,dwmblocks,st
+do
+    git clone https://github.com/lukesmithxyz/$REPO.git ~/.local/src/$REPO
+    cp ~/dotfiles/.local/$REPO.h ~/.local/src/$REPO
+    cd ~/.local/src/$REPO
+    sudo make install
+    cd -
+done

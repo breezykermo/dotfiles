@@ -7,6 +7,7 @@ Mac is a necessary evil, still. You can configure it nicely with the following:
 - [kitty](https://sw.kovidgoyal.net/kitty/), a terminal emulator.
 - [qutebrowser](https://qutebrowser.org/) - a vim-like browser.
 - `brew install lf`, for terminal-based file manager. 
+- `brew install lazygit`, for terminal-based git manager. 
 - [Fantastique Sans Mono](https://github.com/belluzj/fantasque-sans), the font.
 
 ## Install

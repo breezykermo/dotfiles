@@ -1,5 +1,6 @@
 # open terminal
-cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
+alt - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
+alt - w : /Applications/qutebrowser.app/Contents/MacOS/qutebrowser
 
 # open mpv with url from clipboard
 # cmd - m : open -na /Applications/mpv.app $(pbpaste)
@@ -48,23 +49,24 @@ shift + cmd - n : yabai -m space --create && \
 cmd + alt - n : yabai -m space --create && \
                 index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
                 yabai -m space --focus "${index}"
+
 # destroy desktop
 cmd + alt - w : yabai -m space --destroy
 
 # fast focus desktop
-cmd + alt - x : yabai -m space --focus recent
-cmd + alt - z : yabai -m space --focus prev || skhd -k "ctrl + alt + cmd - z"
-cmd + alt - c : yabai -m space --focus next || skhd -k "ctrl + alt + cmd - c"
-cmd + alt - 1 : yabai -m space --focus  1 || skhd -k "ctrl + alt + cmd - 1"
-cmd + alt - 2 : yabai -m space --focus  2 || skhd -k "ctrl + alt + cmd - 2"
-cmd + alt - 3 : yabai -m space --focus  3 || skhd -k "ctrl + alt + cmd - 3"
-cmd + alt - 4 : yabai -m space --focus  4 || skhd -k "ctrl + alt + cmd - 4"
-cmd + alt - 5 : yabai -m space --focus  5 || skhd -k "ctrl + alt + cmd - 5"
-cmd + alt - 6 : yabai -m space --focus  6 || skhd -k "ctrl + alt + cmd - 6"
-cmd + alt - 7 : yabai -m space --focus  7 || skhd -k "ctrl + alt + cmd - 7"
-cmd + alt - 8 : yabai -m space --focus  8 || skhd -k "ctrl + alt + cmd - 8"
-cmd + alt - 9 : yabai -m space --focus  9 || skhd -k "ctrl + alt + cmd - 9"
-cmd + alt - 0 : yabai -m space --focus 10 || skhd -k "ctrl + alt + cmd - 0"
+alt - x : yabai -m space --focus recent
+alt - z : yabai -m space --focus prev || skhd -k "ctrl + alt + cmd - z"
+alt - c : yabai -m space --focus next || skhd -k "ctrl + alt + cmd - c"
+alt - 1 : yabai -m space --focus  1 || skhd -k "ctrl + alt + cmd - 1"
+alt - 2 : yabai -m space --focus  2 || skhd -k "ctrl + alt + cmd - 2"
+alt - 3 : yabai -m space --focus  3 || skhd -k "ctrl + alt + cmd - 3"
+alt - 4 : yabai -m space --focus  4 || skhd -k "ctrl + alt + cmd - 4"
+alt - 5 : yabai -m space --focus  5 || skhd -k "ctrl + alt + cmd - 5"
+alt - 6 : yabai -m space --focus  6 || skhd -k "ctrl + alt + cmd - 6"
+alt - 7 : yabai -m space --focus  7 || skhd -k "ctrl + alt + cmd - 7"
+alt - 8 : yabai -m space --focus  8 || skhd -k "ctrl + alt + cmd - 8"
+alt - 9 : yabai -m space --focus  9 || skhd -k "ctrl + alt + cmd - 9"
+alt - 0 : yabai -m space --focus 10 || skhd -k "ctrl + alt + cmd - 0"
 
 # send window to desktop and follow focus
 shift + cmd - x : yabai -m window --space recent && yabai -m space --focus recent

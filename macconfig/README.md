@@ -19,13 +19,14 @@ cp kitty/kitty.conf ~/.config/kitty/kitty.conf
 cp qutebrowser/config.py ~/.qutebrowser/config.py
 ```
 
-2. Setup vim.
-3. Copy [desktop image](https://raw.githubusercontent.com/breezykermo/dotfiles/master/.local/share/thiemeyer_road_to_samarkand.jpg) to Pictures, set as background.
-4. Setup apps:
+2. Copy [desktop image](https://raw.githubusercontent.com/breezykermo/dotfiles/master/.local/share/thiemeyer_road_to_samarkand.jpg) to Pictures, set as background.
+3. Setup apps:
+- vim / nvim
 - DEVONthink
 - [Flux](https://justgetflux.com/news/pages/macquickstart/)
 - Dropbox (for syncing pkb and DT)
 - ProtonVPN
+- mac-emacs (with doom setup)
 
-5. Rebind [caps lock to control](https://stackoverflow.com/questions/127591/using-caps-lock-as-esc-in-mac-os-x), and likely some other native settings..
+4. Rebind [caps lock to control](https://stackoverflow.com/questions/127591/using-caps-lock-as-esc-in-mac-os-x), and likely some other native settings..
 

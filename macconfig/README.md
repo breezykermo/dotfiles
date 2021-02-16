@@ -20,4 +20,12 @@ cp qutebrowser/config.py ~/.qutebrowser/config.py
 ```
 
 2. Setup vim.
-3. Setup DevonTHINK.
+3. Copy [desktop image](https://raw.githubusercontent.com/breezykermo/dotfiles/master/.local/share/thiemeyer_road_to_samarkand.jpg) to Pictures, set as background.
+4. Setup apps:
+- DEVONthink
+- [Flux](https://justgetflux.com/news/pages/macquickstart/)
+- Dropbox (for syncing pkb and DT)
+- ProtonVPN
+
+5. Rebind [caps lock to control](https://stackoverflow.com/questions/127591/using-caps-lock-as-esc-in-mac-os-x), and likely some other native settings..
+

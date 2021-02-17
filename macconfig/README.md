@@ -6,6 +6,7 @@ Mac is a necessary evil, still. You can configure it nicely with the following:
 - [skhd](https://github.com/koekeishiya/skhd), a hotkey daemon.
 - [kitty](https://sw.kovidgoyal.net/kitty/), a terminal emulator.
 - [qutebrowser](https://qutebrowser.org/) - a vim-like browser.
+- [Alfred](https://www.alfredapp.com/) - full-featured replacement for quick opens covered by dmenu.
 - `brew install lf`, for terminal-based file manager. 
 - `brew install lazygit`, for terminal-based git manager. 
 - [Fantastique Sans Mono](https://github.com/belluzj/fantasque-sans), the font.
@@ -21,6 +22,8 @@ cp qutebrowser/config.py ~/.qutebrowser/config.py
 cp ../.config/lf/* ~/.config/lf/
 ```
 
+In 'Alfred', double-click on each of the workflows to install.
+
 2. Copy [desktop image](https://raw.githubusercontent.com/breezykermo/dotfiles/master/.local/share/thiemeyer_road_to_samarkand.jpg) to Pictures, set as background.
 3. Setup apps:
 - vim / nvim
@@ -28,7 +31,7 @@ cp ../.config/lf/* ~/.config/lf/
 - [Flux](https://justgetflux.com/news/pages/macquickstart/)
 - Dropbox (for syncing pkb and DT)
 - ProtonVPN
-- mac-emacs (with doom setup)
+- mac-emacs (with doom setup. Use in terminal by running `emacs -nw`)
 
 4. Rebind [caps lock to control](https://stackoverflow.com/questions/127591/using-caps-lock-as-esc-in-mac-os-x), and likely some other native settings..
 

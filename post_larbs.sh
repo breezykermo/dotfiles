@@ -10,6 +10,10 @@ sudo pacman -S docker docker-openrc
 sudo rc-update add docker
 sudo usermod -aG docker $USER
 
+# work
+yay -S slack-desktop
+
+
 # fish
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install edc/bass

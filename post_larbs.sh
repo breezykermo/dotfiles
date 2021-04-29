@@ -13,6 +13,8 @@ sudo usermod -aG docker $USER
 
 # work
 yay -S slack-desktop
+yay -S miniconda3
+# TODO: comment out line in config.fish according to where it was installed
 
 
 # fish

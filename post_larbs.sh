@@ -1,34 +1,36 @@
 # Post LARBS
 
 # FIRST SET UP SSH KEY CONNECTED TO MY GITHUB
+DOTFILES=~/dotfiles
 
 # essentials
 cd ~
-sudo pacman -S fish tmux lazygit ctags bat htop nodejs npm
+sudo pacman -S fish tmux lazygit ctags bat htop nodejs npm \
+	docker docker-openrc
+sudo rc-update add docker
 
-rm -rf ~/dotfiles
-git clone git@github.com:breezykermo/dotfiles.git
+rm -rf $DOTFILESgit clone git@github.com:breezykermo/dotfiles.git
 
 # config folders
 for fld in ".config" ".local/bin" ".local/share"
 do
 	rm -rf ~/$fld
-	cp -r ~/dotfiles/$fld ~/$fld
+	cp -r $DOTFILES/$fld ~/$fld
 done
 
 # suckless
 for pg in st dmenu dwm dwmblocks
 do
 	rm ~/.local/$pg/config.h
-	cp ~/dotfiles/.local/$pg.h ~/.local/src/$pg/config.h
-	cd ~/dotfiles/src/$pg && sudo make install && cd -
+	cp $DOTFILES/.local/$pg.h ~/.local/src/$pg/config.h
+	cd $DOTFILES/src/$pg && sudo make install && cd -
 done
 
 # other files
 for fle in ".gitconfig" ".gitignore"
 do
 	rm ~/$fle
-	cp ~/dotfiles/$fle ~/$fle
+	cp $DOTFILES/$fle ~/$fle
 done
 
 # vim

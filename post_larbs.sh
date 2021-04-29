@@ -8,6 +8,7 @@ cd ~
 sudo pacman -S fish tmux lazygit ctags bat htop nodejs npm \
 	docker docker-openrc
 sudo rc-update add docker
+sudo usermod -aG docker $USER
 
 rm -rf $DOTFILESgit clone git@github.com:breezykermo/dotfiles.git
 

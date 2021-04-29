@@ -1,11 +1,12 @@
-# Post LARBS
+#!/usr/bin/env bash
 
 # FIRST SET UP SSH KEY CONNECTED TO MY GITHUB
-DOTFILES=~/dotfiles
+
+DOTFILES=$(pwd)
 
 # essentials
 cd ~
-sudo pacman -S fish tmux xorg-xrandr lazygit ctags bat htop nodejs npm firefox
+sudo pacman -S fish tmux xorg-xrandr lazygit ctags bat htop nodejs npm firefox emacs
 sudo pacman -S docker docker-openrc
 sudo rc-update add docker
 sudo usermod -aG docker $USER
@@ -51,6 +52,13 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.config/nvim
 mkdir ~/.config/nvim
 cat ~/.vim/init.vim.template >> ~/.config/nvim/init.vim
+
+# emacs
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+rm -rf ~/.doom.d
+git clone git@github.com:breezykermo/.doom.d ~/.doom.d
+~/.emacs.d/bin/doom sync
 
 # shell config
 # chsh -s `which fish`

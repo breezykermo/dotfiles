@@ -5,8 +5,8 @@ DOTFILES=~/dotfiles
 
 # essentials
 cd ~
-sudo pacman -S fish tmux lazygit ctags bat htop nodejs npm \
-	docker docker-openrc
+sudo pacman -S fish tmux xorg-xrandr lazygit ctags bat htop nodejs npm firefox
+sudo pacman -S docker docker-openrc
 sudo rc-update add docker
 sudo usermod -aG docker $USER
 

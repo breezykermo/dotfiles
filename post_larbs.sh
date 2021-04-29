@@ -13,7 +13,7 @@ sudo usermod -aG docker $USER
 rm -rf $DOTFILESgit clone git@github.com:breezykermo/dotfiles.git
 
 # config folders
-for fld in ".config" ".local/bin" ".local/share"
+for fld in ".config" ".local/bin"
 do
 	rm -rf ~/$fld
 	cp -r $DOTFILES/$fld ~/$fld
@@ -24,7 +24,7 @@ for pg in st dmenu dwm dwmblocks
 do
 	rm ~/.local/$pg/config.h
 	cp $DOTFILES/.local/$pg.h ~/.local/src/$pg/config.h
-	cd $DOTFILES/src/$pg && sudo make install && cd -
+	cd ~/.local/src/$pg && sudo make install && cd -
 done
 
 # other files

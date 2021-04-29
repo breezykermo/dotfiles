@@ -10,6 +10,10 @@ sudo pacman -S fish tmux lazygit ctags bat htop nodejs npm \
 sudo rc-update add docker
 sudo usermod -aG docker $USER
 
+# fish
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+fisher install edc/bass
+
 rm -rf $DOTFILESgit clone git@github.com:breezykermo/dotfiles.git
 
 # config folders

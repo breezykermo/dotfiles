@@ -6,7 +6,7 @@ DOTFILES=$(pwd)
 
 # essentials
 cd ~
-sudo pacman -S fish tmux xorg-xrandr lazygit ctags bat htop nodejs npm firefox emacs
+sudo pacman -S fish tmux xorg-xrandr lazygit ctags bat htop nodejs npm firefox emacs github-cli
 sudo pacman -S docker docker-openrc
 sudo rc-update add docker
 sudo usermod -aG docker $USER

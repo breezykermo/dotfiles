@@ -12,9 +12,9 @@ sudo rc-update add docker
 sudo usermod -aG docker $USER
 
 # work
-yay -S slack-desktop
-yay -S miniconda3
-yay -S dropbox-cli
+yay --noconfirm --needed -S slack-desktop
+yay --noconfirm --needed -S miniconda3
+yay --noconfirm --needed -S dropbox-cli
 # TODO: comment out line in config.fish according to where it was installed
 
 

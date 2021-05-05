@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = Lachlan
-	email = Kermode
+	name = Lachlan Kermode
+	email = lachiekermode@gmail.com
 [core]
 	editor = nvim
 [filter "lfs"]

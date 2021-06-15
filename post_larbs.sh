@@ -6,45 +6,45 @@ DOTFILES=$(pwd)
 
 # essentials
 cd ~
-sudo pacman -S fish tmux xorg-xrandr lazygit ctags bat htop nodejs npm firefox emacs github-cli
-sudo pacman -S docker docker-openrc
-sudo rc-update add docker
-sudo usermod -aG docker $USER
+# sudo pacman -S fish tmux xorg-xrandr lazygit ctags bat htop nodejs npm firefox emacs github-cli
+# sudo pacman -S docker docker-openrc
+# sudo rc-update add docker
+# sudo usermod -aG docker $USER
 
 # work
-yay --noconfirm --needed -S slack-desktop
-yay --noconfirm --needed -S miniconda3
-yay --noconfirm --needed -S dropbox-cli
+# yay --noconfirm --needed -S slack-desktop
+# yay --noconfirm --needed -S miniconda3
+# yay --noconfirm --needed -S dropbox-cli
 # TODO: comment out line in config.fish according to where it was installed
 
 
 # fish
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-fisher install edc/bass
+# curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+# fisher install edc/bass
 
-rm -rf $DOTFILESgit clone git@github.com:breezykermo/dotfiles.git
+# rm -rf $DOTFILESgit clone git@github.com:breezykermo/dotfiles.git
 
 # config folders
-for fld in ".config" ".local/bin"
+for fld in ".config/fish" ".config/nvim" ".local/bin"
 do
 	rm -rf ~/$fld
 	cp -r $DOTFILES/$fld ~/$fld
 done
 
 # suckless
-for pg in st dmenu dwm dwmblocks
-do
-	rm ~/.local/$pg/config.h
-	cp $DOTFILES/.local/$pg.h ~/.local/src/$pg/config.h
-	cd ~/.local/src/$pg && sudo make install && cd -
-done
+# for pg in st dmenu dwm dwmblocks
+# do
+	# rm ~/.local/$pg/config.h
+	# cp $DOTFILES/.local/$pg.h ~/.local/src/$pg/config.h
+	# cd ~/.local/src/$pg && sudo make install && cd -
+# done
 
 # other files
-for fle in ".gitconfig" ".gitignore"
-do
-	rm ~/$fle
-	cp $DOTFILES/$fle ~/$fle
-done
+# for fle in ".gitconfig" ".gitignore"
+# do
+# 	rm ~/$fle
+# 	cp $DOTFILES/$fle ~/$fle
+# done
 
 # vim
 rm -rf ~/.vim
